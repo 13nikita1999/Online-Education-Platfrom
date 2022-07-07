@@ -1,0 +1,556 @@
+*{
+margin :0;
+padding : 0;
+box-sizing : boder-box;
+}
+
+body{
+    font-family: 'Poppins', sans-serif;
+}
+
+h1{
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: rgb(34,35,85);
+}
+span{
+    font-size: .9rem;
+    color: #757373;
+}
+h6{
+    font-size: 1.1rem;
+    color: rgb(24,24,49);
+}
+
+/*----------------------------- Navigation ----------------------------- */
+nav{
+    position: fixed;
+    width: 85%;
+    background-color: white;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 1vw 8vw;
+    align-items: center;
+    box-shadow: 2px 2px 10px rgba(0,0,0,0.15);
+    z-index: 999;
+}
+nav img{
+    width: 150px;
+    cursor: pointer;
+}
+nav .navigation{
+    display: flex;
+}
+
+#sidenav{
+    display: none;
+}
+#menubar{
+    display: none;
+}
+nav .navigation ul{
+    display: flex;
+    justify-content: flex-end;
+    align-items: center ;
+}
+nav .navigation ul li{
+    list-style: none;
+    margin-left: 30px;
+}
+nav .navigation ul li a{
+    text-decoration:none;
+    color: rgb(21,21,100);  
+    font-size: 16px;
+    font-weight: 600;
+    transition: 0.3s ease;
+}
+nav .navigation ul li a.active,
+nav .navigation ul li a:hover{
+    color: rgb(120, 7, 26);
+    font-weight: 600;
+    border-bottom: 4px solid;
+    padding: 5px 13px;
+    border-image: linear-gradient(to right , rgb(8, 8, 76), rgb(184, 14, 42) , rgb(88, 101, 9)) 1;
+}
+
+/*------------------------------------ Home menu------------------------------------ */
+#home{
+    background-image: linear-gradient(rgba(9, 5, 54, 0.3),rgba(9, 5, 54, 0.3)),url("./images/back.jpg");
+    height: 100vh;
+    width: 100%;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding-top: 40px;
+}
+#home h2{
+    color: white;
+    font-size: 2.2rem;
+    letter-spacing: 1px;
+}
+#home p{
+    width: 50%;
+    color: #fff;
+    font-size: 0.9rem;
+    letter-spacing: 1px;
+    line-height: 25px;
+    
+}
+#home .btn{
+    margin-top: 50px;   
+}
+#home a{
+    text-decoration: none;
+    font-size: 0.9rem;
+    padding: 13px 35px;
+    background-color: white;
+    font-weight: 600;
+    border-radius: 5px;
+}
+#home a.blue{
+    color: white;
+    background-color: rgb(21,21,100);
+    
+}
+#home a.blue:hover{
+    background-color: white;
+    color: rgb(98, 5, 20);
+    box-shadow: 0 0 20px rgb(172, 9, 37), 0 0 0px rgb(172, 9, 37), 0 0 80px rgb(172, 9, 37) ;
+}
+#home a.yellow{
+    color: white;
+    background-color: #FDC938;
+}
+#home a.yellow:hover{
+    background-color: white;
+    color: rgb(161, 161, 8);
+    box-shadow: 0 0 20px rgb(179, 179, 4), 0 0 0px rgb(179, 179, 4), 0 0 80px rgb(179, 179, 4) ;
+}
+
+/*-------------------------- Features -------------------------- */
+#features{
+    padding: 5vw 8vw 0 8vw;
+    text-align: center;
+}
+#features .fea-base{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    grid-gap: 1rem;
+    margin-top: 50px;
+}
+#features .fea-box{
+    background-color: #f9f9fe;
+    padding: 30px;
+    text-align: start;
+}
+#features .fea-box img{
+    height: 5vw;
+    width: 5vw;
+}
+#features .fea-box h3{
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: rgb(46, 46, 59);
+    padding: 13px 0 7px 0;
+}
+#features .fea-box p{
+    font-size: 1rem;
+    font-weight: 400;
+    color: rgb(70, 70, 87);
+}
+
+/*---------------------- Courses ---------------------- */
+#course{
+    padding: 5vw 8vw 8vw 8vw;
+    text-align: center;
+}
+#course .course-box{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    grid-gap: 1rem;
+    margin-top: 50px;
+}
+#course .courses{
+        text-align: start;
+        background-color: #f9f9ff;
+        height: 100%;
+        position: relative;
+}
+#course .courses img{
+    width: 100%;
+    height: 60%;
+    background-size: cover;
+    background-position: center;
+}
+#course .courses .details{
+    padding: 15px 15px 0 15px;
+}
+#course .courses .details a{
+    text-decoration: none;
+}
+#course .courses .details h6{
+    cursor: pointer;
+}
+#course .courses .details i{
+    color: #FDC938;
+    font-size: .9rem;
+}
+#course .courses .cost{
+    background-color: rgb(74,74,136);
+    color: #fff;
+    line-height: 70px;
+    width: 70px;
+    height: 70px;
+    text-align: center;
+    border-radius: 50%;
+    position: absolute;
+    right: 15px;
+    bottom: 100px;
+}
+
+/* -------------------------------- Profiles -------------------------------- */
+#experts{
+    padding: 5vw 8vw 8vw 8vw;
+    text-align: center;
+}
+#experts .expert-box{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-gap: 1rem;
+    margin-top: 50px;
+}
+#experts .expert-box .profile{
+    background-color: #fafaf1;
+    padding: 30px 10px;
+}
+#experts .expert-box .profile .pro-links{
+    margin-top: 10px;
+}
+.pro-links i{
+    padding: 10px 13px;
+    border: 1px solid rgb(21, 21, 100);
+    cursor: pointer;
+    margin: 5px;
+    transition: 0.4s ease-in-out;
+}
+.pro-links i:hover{
+    transform: rotate(360deg);
+    color: white;
+    background-color: rgb(4, 4, 52);
+}
+
+/*---------------------------------- Footer ---------------------------------- */
+footer{
+    padding: 8vw;
+    background-color: rgb(2, 2, 38);
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-wrap: wrap;
+}
+footer .footer-col{
+    padding-bottom: 40px;
+}
+footer h3{
+    color: white;
+    font-weight: 600;
+    padding-bottom: 30px;
+}
+footer li{
+    list-style: none;
+    color: #7b838a;
+    padding: 10px 0px;
+    font-size: 15px;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+footer li:hover{
+    color: whitesmoke;
+}
+footer p{
+    color: #7b838a;
+}
+footer .subscribe{
+    margin-top: 20px;
+   
+}
+footer input{
+    width: 200px;
+    padding: 10px 12px;
+    background-color: white;
+    border: none;
+    outline: none;
+    color: rgb(4, 4, 37);
+    font-weight: 500;
+    font-size: 16px;
+}
+footer .subscribe a{
+    text-decoration: none;
+    font-size: 0.9rem;
+    padding: 10px 15px;
+    background-color: #FFF;
+    font-weight: 600;
+    border-radius: 5px;
+}
+.subscribe a.yellow{
+    color: #FFF;
+    background-color: #d9a20c;
+    transition: 0.3s ease;
+}
+.subscribe a.yellow:hover{
+    color:rgb(1, 1, 40) ;
+    background-color: #FFF;
+}
+footer .copyright{
+    margin-top: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;   
+    flex-wrap: wrap;
+}
+footer .copyright .pro-links{
+    margin-top: 0px;
+}
+footer .copyright p{
+    font-size: 14px;
+    font-weight: 500;
+    color: white;
+}
+
+footer .copyright .pro-links i{
+    background-color: #5f7185;
+    color: white;
+    transition: 0.4s ease-in-out;
+}
+footer .copyright .pro-links i:hover{
+    transform: rotate(360deg);
+    color: rgb(2, 2, 33);
+    background-color: white;
+}
+
+/*---------------- Media Query For Responsiveness---------------- */
+
+@media  only screen  and (max-width:769px){
+    nav{
+        padding: 15px 20px;
+    }
+    nav img{
+        width:130px;
+    }
+    #sidenav{
+        display: block;
+        width:250px ;
+        height: 100vh;
+        position: absolute;
+        /* z-index: 3; */
+        background-color: #29303B;
+        top: 0;
+        left: 0;
+    }
+    #menubar{
+        display: block;
+        position: absolute;
+        top: 50%;
+        right: 0;
+        transform: translate(0%, -50%);
+        z-index: 99;
+        background-color: white;
+        color: green;
+        width:40px;
+        height:40px;
+        padding: 20px 10px;
+    }
+    #sidenav ul{
+        list-style: none;
+    }
+    #sidenav ul li{
+        display:block;
+        width: 200px;
+        position: relative;
+        z-index: 99;
+        margin: 10px 20px;
+    }
+
+    #sidenav ul li a{
+        color: white;
+        text-decoration: none;
+        font-weight: 500;
+        display: block;
+        font-size: 20px;
+        padding: 50px 20px;
+    }
+    #sidenav ul li a:hover{
+        color: rgb(120, 7, 26);
+    
+    }
+
+    nav .navigation ul{
+        position: absolute;
+        top: 0;
+        right: -250px;
+        width: 220px;
+        height: 100vh;
+        background-color: rgba(17, 20, 104, 0.45);
+        backdrop-filter: blur(4.5px);
+        border: 1px solid rgba(255, 255, 255, 0.18);
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: flex-start;        
+    }
+    nav .navigation ul.active{
+        right: 0;
+    }
+    nav .navigation ul li{
+        padding: 20px 0 20px 40px;
+        margin-left: 0;
+    }
+    nav .navigation ul li a{
+        color: #FFF;
+    }
+    #home{
+        padding-top: 0px;
+    }
+    #home p{
+        width: 90%;
+    }
+    #features{
+        padding: 8vw 4vw 0 4vw;
+    }
+    #course{
+        padding: 8vw 4vw 0 4vw;
+    }
+    #experts{
+        padding: 8vw 8vw 4vw 8vw;
+        text-align: center;
+    }
+    footer .copyright .pro-links{
+        margin-top: 15px;
+    }
+
+    /* about  */
+    #about-container{
+        padding: 8vw 4vw 2vw 4vw;
+    }
+    #about-container .about-img{
+        padding-right: 30px;
+    }
+    #trust .trust-img img{
+        width: 50px;
+        height: auto;
+    }
+}
+
+@media (max-width:475px){
+    #about-container{
+        flex-direction: column-reverse;
+    }
+    #about-container .about-img{
+        width: 100%;
+        padding-right: 0px;
+    }
+    #about-container .about-text{
+        width: 100%;
+        padding-bottom: 20px;
+    }
+    #trust .trust-img{
+        margin-top: 40px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+    }
+    #trust .trust-img img{
+        width: 60px;
+        margin: 10px 15px;
+        height: auto;
+    }
+}
+
+@media (max-width:376px){
+    footer input{
+        width: 100%;
+        margin-bottom: 20px;
+    }
+}
+/* --------------------- About  */
+#about-home{
+    background-image: linear-gradient(rgba(9, 5, 54, 0.3),rgba(9, 5, 54, 0.3)),url("./images/back1.jpg");
+    height: 60vh;
+    width: 100%;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding-top: 40px;
+}
+#about-home h2{
+    color: #FFF;
+    font-size: 2.2rem;
+    letter-spacing: 2px;
+}
+#about-container{
+    display: flex;
+    align-items: center;
+    padding: 8vw 8vw 2vw 8vw;
+}
+#about-container .about-img{
+    width: 60%;
+    padding-right: 60px;
+}
+#about-container .about-img img{
+    width: 100%;
+}
+#about-container .about-text{
+    width: 40%;
+}
+#about-container .about-text h2{
+    color: #29303B;
+    padding-bottom: 15px;
+}
+#about-container .about-text p{
+    color: #29303B;
+    font-weight: 300;
+}
+#about-container .about-text .about-fe{
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-top: 30px;
+}
+#about-container .about-text .about-fe .fe-text h5{
+    font-size: 16px;
+    color: #29303B;
+}
+#about-container .about-text .about-fe img{
+    width: 50px;
+    background-size: cover;
+    background-position: center;
+    margin-right: 20px;
+}
+#about-container .about-text .about-fe .fe-text{
+    width: 90%;
+}
+#trust{
+    text-align: center;
+    padding: 8vw;
+}
+#trust .trust-img{
+    margin-top: 60px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+#trust .trust-img img{
+    width: 90px;
+    height: auto;
+}
